@@ -1,0 +1,16 @@
+.env
+.env.production
+venv/
+env/
+pycache/
+__pycache__/
+*.pyc
+instance/
+*.db
+*.sqlite3
+.pytest_cache/
+.coverage
+htmlcov/
+.DS_Store
+Thumbs.db
+.vscode/
