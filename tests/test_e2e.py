@@ -14,6 +14,10 @@ class TestE2ESelenium(unittest.TestCase):
     def setUp(self):
         service = Service(ChromeDriverManager().install())
         options = webdriver.ChromeOptions()
+
+        options.add_argument('--headless')
+        options.add_argument('--no-sandbox')
+        options.add_argument('--disable-dev-shm-usage')
         
         self.driver = webdriver.Chrome(service=service, options=options)
         self.driver.implicitly_wait(5)
