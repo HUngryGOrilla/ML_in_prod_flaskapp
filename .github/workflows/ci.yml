@@ -46,8 +46,11 @@ jobs:
         SECRET_KEY: testing_key
         DATABASE_URL: "sqlite:///:memory:"
       run: |
-        # Run all tests found in the tests/ folder
-        python -m pytest tests/
+        python -m pytest tests/test_unit.py
+        python -m pytest tests/test_integration.py
+        python app.py &
+        sleep 5
+        python -m pytest tests/test_e2e.py
 
   build-and-push:
     needs: test
