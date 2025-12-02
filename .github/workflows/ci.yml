@@ -69,4 +69,4 @@ jobs:
       with:
         context: .
         push: true
-        tags: hungrygo/taskmanager:latest
+        tags: ${{ secrets.DOCKERHUB_USERNAME }}/taskmanager:latest
