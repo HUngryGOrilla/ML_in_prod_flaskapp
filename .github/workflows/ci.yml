@@ -44,7 +44,7 @@ jobs:
       env:
         # These are dummy values for testing logic
         SECRET_KEY: testing_key
-        DATABASE_URL: sqlite:///:memory:
+        DATABASE_URL: "sqlite:///:memory:"
       run: |
         # Run all tests found in the tests/ folder
         python -m pytest tests/
